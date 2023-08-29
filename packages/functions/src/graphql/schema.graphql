@@ -1,0 +1,26 @@
+type Note {
+    dimension: String!
+    measure_name: String!
+    measure_value: String!
+    content: String!
+    time: String,
+}
+
+input NoteInput {
+    dimension: String!
+    measure_name: String!
+    measure_value: String!
+    content: String!
+}
+
+type Query {
+    listNotes: [Note]
+}
+
+type Mutation {
+    addNote(value: NoteInput!): Note
+}
+
+type Subscription {
+    onAddedNote: Note @aws_subscribe(mutations: ["addNote"])
+}

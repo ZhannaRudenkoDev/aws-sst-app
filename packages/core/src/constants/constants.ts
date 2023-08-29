@@ -1,0 +1,4 @@
+export const constants = {
+    ACCESS_KEY_ID: 'AKIAZEB453EUGFFMRPOZ',
+    SECRET_ACCESS_KEY: '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',
+};
